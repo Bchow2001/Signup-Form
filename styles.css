@@ -1,8 +1,16 @@
+@font-face {
+    font-family: logo-font;
+    src: url(./resources/Fira_Mono/FiraMono-Regular.ttf);
+}
+
 html, body{
     padding: 0;
     margin: 0;
 }
 
+input{
+    width: 100px
+}
 .wrapper{
     height: 100vh;
     display: flex;
@@ -13,32 +21,140 @@ html, body{
     flex: 1 1 0;
     display: flex;
     background-image: url(./resources/Statue.png);
-    background-color: rgb(146, 0, 0);
+    background-color: rgb(178, 34, 52);
 }
 
 .logo-container{
     flex: 1 1 0;
-    margin-top: 22vh;
+    margin-top: 300px;
     display: flex;
-    height: 125px;
-    border: 2px blue solid;
+    height: 150px;
+    background-color: rgba(0, 0, 0, 0.9);
+    min-width: 500px;
 }
 
-.company-name{
-    color: white;
-    font-size: 60px;
-    flex: auto;
-    text-align: center;
-    justify-content: center;
-}
 
-.form-container{
+
+.form-wrapper{
     flex: 2.5 1 0;
     display: flex;
     flex-direction: column;
     min-width: 400px;
 }
 
-div{
-    border: 2px red solid;
+.hook-container{
+    flex: 1.1 1 0;
+    background-color: rgba(60, 59, 110);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-left: 70px;
+}
+
+.hook{
+    color: white;
+    font-size: 48px;
+    font-family: "Roboto", monospace;
+}
+
+.form-container {
+    flex: 1.7 1 0;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+}
+
+form{
+    flex: 4 1 0;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+}
+
+/* .pair{
+    display: flex;
+    flex-direction: column;
+} */
+
+.login-container {
+    flex: 1 1 0;
+    background-color: rgba(60, 59, 110);
+}
+
+.company-name{
+    color: white;
+    font-size: 72px;
+    flex: 1 1 0;
+    font-family: logo-font, apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 17px;
+    min-width: 330px;
+    letter-spacing: -7px;
+}
+
+.company-name{
+    animation: glitch 2s linear infinite;
+  }
+  
+@keyframes glitch{
+    2%,64%{
+      transform: translate(2px,0) skew(0deg);
+    }
+    4%,60%{
+      transform: translate(-2px,0) skew(0deg);
+    }
+    62%{
+      transform: translate(0,0) skew(5deg); 
+    }
+}
+  
+.company-name:before,
+.company-name:after{
+    content: attr(title);
+    position: absolute;
+    left: 10;
+}
+  
+.company-name:before{
+    animation: glitchTop 2s linear infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+  
+@keyframes glitchTop{
+    2%,64%{
+      transform: translate(2px,-2px);
+    }
+    4%,60%{
+      transform: translate(-2px,2px);
+    }
+    62%{
+      transform: translate(13px,-1px) skew(-13deg); 
+    }
+}
+  
+.company-name:after{
+    animation: glitchBotom 1.5s linear infinite;
+    clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+  
+@keyframes glitchBotom{
+    2%,64%{
+      transform: translate(-2px,0);
+    }
+    4%,60%{
+      transform: translate(-2px,0);
+    }
+    62%{
+      transform: translate(-22px,5px) skew(21deg); 
+    }
+}
+
+
+label {
+    font-family: "Roboto", monospace;
+    font-size: 36px;
 }
