@@ -9,8 +9,16 @@ html, body{
 }
 
 input{
-    width: 100px
+    width: 250px;
+    height: 30px;
+    border: 0.5px solid gray;
+    border-radius: 5px;
 }
+
+input:focus{
+    border: 2px blue solid;
+}
+
 .wrapper{
     height: 100vh;
     display: flex;
@@ -33,8 +41,6 @@ input{
     min-width: 500px;
 }
 
-
-
 .form-wrapper{
     flex: 2.5 1 0;
     display: flex;
@@ -48,7 +54,8 @@ input{
     display: flex;
     justify-content: left;
     align-items: center;
-    padding-left: 70px;
+    padding-left: 50px;
+    padding-top: 5px;
 }
 
 .hook{
@@ -58,27 +65,77 @@ input{
 }
 
 .form-container {
-    flex: 1.7 1 0;
+    flex: 1.2 1 0;
     display: flex;
     flex-direction: column;
-    justify-content:center;
+    padding-top: 30px;
+    padding-left: 50px;
+}
+
+.sign-up-hook{
+    font-size: 32px;
+    font-family: "Roboto",monospace;
+    margin-bottom: 30px;
 }
 
 form{
-    flex: 4 1 0;
+    flex: 1 1 0;
     display: flex;
     flex-direction: column;
-    justify-content:space-evenly;
+    justify-content:space-around;
+    max-height: 300px;
 }
 
-/* .pair{
+label {
+    font-family: "Roboto", monospace;
+    font-size: 24px;
+}
+
+.row{
+    display:flex;
+    gap: 60px;
+}
+
+.pair{
     display: flex;
     flex-direction: column;
-} */
+}
 
 .login-container {
     flex: 1 1 0;
     background-color: rgba(60, 59, 110);
+    padding-top: 50px;
+    padding-left: 50px;
+}
+
+button{
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(220, 34, 52);
+    border-radius: 10px;
+    padding: 15px 60px;
+    border:none;
+}
+
+.sign-in{
+    color: white;
+    font-size: 28px;
+    font-family: "Roboto", monospace;
+    margin-top: 25px;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active{
+    text-decoration: none;
+}
+
+a{
+    color: rgb(220, 34, 52);
+    font-weight: 900;
 }
 
 .company-name{
@@ -153,8 +210,3 @@ form{
     }
 }
 
-
-label {
-    font-family: "Roboto", monospace;
-    font-size: 36px;
-}
