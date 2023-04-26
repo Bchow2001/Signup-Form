@@ -1,5 +1,5 @@
-password = document.getElementById('password')
-confirmPassword = document.getElementById('confirm_password')
+const password = document.getElementById('password')
+const confirmPassword = document.getElementById('confirm_password')
 
 var check = function() {
     if (password.value == "" || confirmPassword.value =="") {
