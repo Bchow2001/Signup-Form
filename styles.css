@@ -119,6 +119,11 @@ button{
     border:none;
 }
 
+button:hover{
+    color: rgb(220, 34, 52);
+    background-color: white;
+}
+
 .sign-in{
     color: white;
     font-size: 28px;
